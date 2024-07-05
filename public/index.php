@@ -1,1 +1,3 @@
-<?php require "../app/views/checkout.html";
+<?php
+
+require "../app/views/checkout.html";

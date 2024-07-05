@@ -3,7 +3,7 @@
 /* global fetch */
 /* global URLSearchParams */
 
-const stripe;
+const stripe = Stripe("pk_test_51PZ7U8RrG5wqDvdWxbZlymcj37zISMNFYC6sf82jAm5BpXp7boOhMDbDbyqAKrIOodfUTQQMExvzynj7PZ2xs2bF00i2d8bPaS");
 
 let amount;
 initialize();
@@ -45,7 +45,7 @@ async function handleSubmit(e) {
   const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
-      return_url: "",
+      return_url: "https://gaelfelix.sites.3wa.io/cours-3wa/php/bre02-php-donate-for-ducks/public/index.php",
     },
   });
 
