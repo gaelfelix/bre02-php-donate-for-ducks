@@ -5,8 +5,15 @@
 
 const stripe = Stripe("pk_test_51PZ7U8RrG5wqDvdWxbZlymcj37zISMNFYC6sf82jAm5BpXp7boOhMDbDbyqAKrIOodfUTQQMExvzynj7PZ2xs2bF00i2d8bPaS");
 
+let amountInput = document.getElementById('montant-personnalise'); 
 let amount;
-initialize();
+
+amountInput.addEventListener('change', function(event) {
+  amount = event.target.value;
+  if (amount >= 1) {
+    initialize();
+  }
+});
 
 let elements;
 
